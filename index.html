@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>aadiiii - Adi's Flirting Skills</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400;1,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Floating Hearts Background Container -->
+  <div class="hearts-canvas" id="heartsContainer" aria-hidden="true"></div>
+
+  <!-- Navigation Backdrop for Mobile -->
+  <div class="nav-backdrop" id="navBackdrop"></div>
+
+  <!-- Navigation Bar -->
+  <header class="navbar-wrapper">
+    <div class="nav-container">
+      <a href="#home" class="logo">
+        <svg class="heart-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+        </svg>
+        <span>aadiiii</span>
+      </a>
+
+      <!-- Mobile Menu Toggle Button -->
+      <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle navigation menu">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </button>
+
+      <!-- Nav Links (Desktop: Horizontal Navbar, Mobile: Vertical Side Navigation Bar) -->
+      <nav class="nav-links" id="navLinks" aria-label="Main Navigation">
+        <div class="mobile-nav-header">
+          <div class="drawer-logo">
+            <svg class="heart-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+            </svg>
+            <span>aadiiii</span>
+          </div>
+          <button class="close-menu-btn" id="closeMenuBtn" aria-label="Close navigation menu">&times;</button>
+        </div>
+
+        <div class="nav-links-list">
+          <a href="#home" class="nav-item">
+            <span class="nav-item-icon">🏠</span>
+            <span class="nav-item-text">Home</span>
+          </a>
+          <a href="#skills" class="nav-item active">
+            <span class="nav-item-icon">✨</span>
+            <span class="nav-item-text">Skills</span>
+          </a>
+          <a href="#gallery" class="nav-item">
+            <span class="nav-item-icon">💖</span>
+            <span class="nav-item-text">Gallery</span>
+          </a>
+          <a href="#contact" class="nav-item">
+            <span class="nav-item-icon">💌</span>
+            <span class="nav-item-text">Contact</span>
+          </a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero Section -->
+    <section class="hero-section" id="home">
+      <div class="hero-content">
+        <!-- Three Outline Hearts -->
+        <div class="heart-trio">
+          <svg class="mini-heart" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+          </svg>
+          <svg class="mini-heart center-heart" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+          </svg>
+          <svg class="mini-heart" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+          </svg>
+        </div>
+
+        <p class="hero-pretitle">Welcome to:</p>
+        <h1 class="hero-title">Adi's Flirting Skills</h1>
+        <p class="hero-subtitle">Where charm meets heart, and every glance is an invitation</p>
+
+        <!-- CTA Buttons -->
+        <div class="hero-cta-group">
+          <a href="#skills" class="btn btn-primary">
+            <svg class="btn-heart" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4">
+              <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+            </svg>
+            <span>Explore Skills</span>
+          </a>
+          <a href="#gallery" class="btn btn-secondary">
+            <span>View Gallery</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Gallery Section (Directly from design photo) -->
+    <section class="gallery-section" id="gallery">
+      <div class="section-container">
+        <h2 class="section-heading">A Gallery of Love</h2>
+        <div class="gallery-grid">
+          <div class="gallery-card card-1" tabindex="0" data-src="images/adi-1.jpg" data-caption="Sweet Moments — Royal Enfield vibes ♡">
+            <img src="images/adi-1.jpg" alt="Adi resting on bike - Sweet Moments" class="gallery-img" loading="lazy">
+            <div class="card-overlay">
+              <span class="card-label">Sweet Moments ♡</span>
+            </div>
+          </div>
+
+          <div class="gallery-card card-2" tabindex="0" data-src="images/adi-2.jpg" data-caption="Pure Charm — Poolside sunshine & smiles ✨">
+            <img src="images/adi-2.jpg" alt="Adi poolside smile - Pure Charm" class="gallery-img" loading="lazy">
+            <div class="card-overlay">
+              <span class="card-label">Pure Charm ✨</span>
+            </div>
+          </div>
+
+          <div class="gallery-card card-3" tabindex="0" data-src="images/adi-3.jpg" data-caption="Golden Hour Vibes — Sunset by the sea 💖">
+            <img src="images/adi-3.jpg" alt="Adi at sunset - Golden Hour" class="gallery-img" loading="lazy">
+            <div class="card-overlay">
+              <span class="card-label">Golden Hour 💖</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills Section (Requested to be left empty for now as a prototype ready for skills) -->
+    <section class="skills-section" id="skills">
+      <div class="section-container">
+        <h2 class="section-heading">Adi's Flirting Skills</h2>
+        <p class="section-subtext">The masterclass of charm, wit, and romantic gestures.</p>
+
+        <!-- Empty state placeholder card for skills -->
+        <div class="skills-placeholder-box">
+          <div class="sparkle-badge">
+            <span class="sparkle-icon">✨</span>
+            <span>Skills Section — Ready for your inputs!</span>
+          </div>
+          <h3 class="placeholder-title">Awaiting Adi's Secret Charms</h3>
+          <p class="placeholder-desc">
+            This space is reserved for your personalized skills, smooth one-liners, charm techniques, or flirting stories. Whenever you are ready, share your skills and they will appear right here!
+          </p>
+          <div class="empty-skill-slots">
+            <div class="slot-badge">✨ Skill #1 (Slot ready)</div>
+            <div class="slot-badge">✨ Skill #2 (Slot ready)</div>
+            <div class="slot-badge">✨ Skill #3 (Slot ready)</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact-section" id="contact">
+      <div class="section-container">
+        <h2 class="section-heading">Say Hello to Adi</h2>
+        <p class="section-subtext">Got questions or looking for charm advice? Drop a note.</p>
+        <a href="https://www.instagram.com/_aditya_salvi_?obrf=aHA3N2drbmQwdXU4" target="_blank" rel="noopener noreferrer" class="contact-card" aria-label="DM Adi on Instagram @_aditya_salvi_">
+          <div class="contact-info">
+            <span class="heart-pulse">💌</span>
+            <h3>Stay In Touch</h3>
+            <p>Ready to level up your charm game? Connect with Adi anytime.</p>
+            <div class="contact-dm-pill">
+              <svg class="insta-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+              </svg>
+              <span>DM Adi on Instagram (@_aditya_salvi_)</span>
+            </div>
+          </div>
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <!-- Sweet Footer -->
+  <footer class="footer">
+    <div class="footer-content">
+      <p>Made with <span class="footer-heart">💖</span> for <strong>Adi's Flirting Skills</strong></p>
+      <p class="footer-sub">&copy; 2026 aadiiii. All charm reserved.</p>
+    </div>
+  </footer>
+
+  <!-- Lightbox Modal for Full View -->
+  <div class="lightbox-modal" id="lightboxModal" aria-hidden="true">
+    <div class="lightbox-backdrop" id="lightboxBackdrop"></div>
+    <div class="lightbox-content">
+      <button class="lightbox-close" id="lightboxClose" aria-label="Close photo view">&times;</button>
+      <img src="" alt="Enlarged gallery photo" id="lightboxImg" class="lightbox-img">
+      <p id="lightboxCaption" class="lightbox-caption"></p>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
+

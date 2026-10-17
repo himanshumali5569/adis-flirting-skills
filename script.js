@@ -218,5 +218,35 @@ document.addEventListener('DOMContentLoaded', () => {
       setTimeout(() => toast.remove(), 350);
     }, 2800);
   }
+
+  // 7. Copy Flirting Line to Clipboard
+  const copyBtns = document.querySelectorAll('.copy-btn');
+  copyBtns.forEach(btn => {
+    btn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      const textToCopy = btn.getAttribute('data-text');
+      if (!textToCopy) return;
+
+      navigator.clipboard.writeText(textToCopy).then(() => {
+        spawnHeartBurst(btn);
+        const iconSpan = btn.querySelector('.copy-icon');
+        const textSpan = btn.querySelector('.copy-text');
+        
+        btn.classList.add('copied');
+        if (iconSpan) iconSpan.textContent = '✓';
+        if (textSpan) textSpan.textContent = 'Copied!';
+
+        showSweetToast('💖 Flirting line copied to clipboard!');
+
+        setTimeout(() => {
+          btn.classList.remove('copied');
+          if (iconSpan) iconSpan.textContent = '📋';
+          if (textSpan) textSpan.textContent = 'Copy';
+        }, 2200);
+      }).catch(() => {
+        showSweetToast('Line ready: ' + textToCopy);
+      });
+    });
+  });
 });
 
